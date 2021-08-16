@@ -26,32 +26,59 @@ class Ui_Dialog(object):
         self.L1.setIconSize(QtCore.QSize(20, 20))
         self.L1.setCheckable(False)
         self.L1.setObjectName("L1")
+
         self.L2 = QtWidgets.QPushButton(Dialog)
         self.L2.setGeometry(QtCore.QRect(120, 30, 75, 71))
         self.L2.setObjectName("L2")
+
         self.L3 = QtWidgets.QPushButton(Dialog)
         self.L3.setGeometry(QtCore.QRect(220, 30, 71, 71))
         self.L3.setObjectName("L3")
+
         self.L22 = QtWidgets.QPushButton(Dialog)
         self.L22.setGeometry(QtCore.QRect(120, 130, 75, 71))
         self.L22.setObjectName("L22")
+
         self.L32 = QtWidgets.QPushButton(Dialog)
         self.L32.setGeometry(QtCore.QRect(220, 130, 75, 71))
         self.L32.setObjectName("L32")
+
         self.L12 = QtWidgets.QPushButton(Dialog)
         self.L12.setGeometry(QtCore.QRect(20, 130, 75, 71))
         self.L12.setObjectName("L12")
+
         self.L23 = QtWidgets.QPushButton(Dialog)
         self.L23.setGeometry(QtCore.QRect(120, 230, 75, 71))
         self.L23.setObjectName("L23")
+
         self.L33 = QtWidgets.QPushButton(Dialog)
         self.L33.setGeometry(QtCore.QRect(220, 230, 75, 71))
         self.L33.setObjectName("L33")
+
         self.L13 = QtWidgets.QPushButton(Dialog)
         self.L13.setGeometry(QtCore.QRect(20, 230, 75, 71))
         self.L13.setObjectName("L13")
-        self.A = QtWidgets.QPushButton
-        self.L1.clicked.connect(self.contador)
+
+# clics
+#        self.L1.clicked.connect(self.contador)
+#        self.L2.clicked.connect(self.contador)
+#        self.L3.clicked.connect(self.contador)
+
+        contador = 0
+        contador2 = 0
+
+        if contador == 0:
+            while contador == 0:
+                self.L1.clicked.connect(self.activar1L1)
+                self.L2.clicked.connect(self.activar1L2)
+                self.L3.clicked.connect(self.activar1L3)
+                contador = contador + 1
+        if contador == 1:
+            while contador == 1:
+                self.L1.clicked.connect(self.activar2L1)
+                self.L2.clicked.connect(self.activar2L2)
+                self.L3.clicked.connect(self.activar2L3)
+                contador = contador - 1
 
         self.retranslateUi(Dialog)
         QtCore.QMetaObject.connectSlotsByName(Dialog)
@@ -70,75 +97,101 @@ class Ui_Dialog(object):
         self.L33.setText(_translate("Dialog", "PushButton"))
         self.L13.setText(_translate("Dialog", "PushButton"))
 
-        def activar1(self):
-            self.L1.setEnabled(False)
-            self.L1.setText("X")
-            self.L1.setStyleSheet("border: 4px solid ;")
-            self.L1.setStyleSheet("color: green ;")
-            self.L1.setStyleSheet("background: '#BC006C'")
+#        def activar1(self):
+#            self.L1.setEnabled(False)
+#            self.L1.setText("X")
+#            self.L1.setStyleSheet("border: 4px solid ;")
+#            self.L1.setStyleSheet("color: green ;")
+#            self.L1.setStyleSheet("background: '#red'")
 
+# primera fila
     def activar1L1(self):
         self.L1.setEnabled(False)
-        self.L1.setText("O")
-        self.L1.setStyleSheet("border: 4px solid ;")
-        self.L1.setStyleSheet("color: green ;")
-        self.L1.setStyleSheet("background: '#BC0006C'")
+        self.L1.setText("X")
+        self.L1.setStyleSheet("background: '#red'")
 
     def activar1L2(self):
         self.L2.setEnabled(False)
-        self.L2.setText("O")
-        self.L2.setStyleSheet("border: 4px solid ;")
-        self.L2.setStyleSheet("color: green ;")
-        self.L2.setStyleSheet("background: '#BC0006C'")
+        self.L2.setText("X")
+        self.L2.setStyleSheet("background: '#red'")
 
     def activar1L3(self):
         self.L3.setEnabled(False)
-        self.L3.setText("O")
-        self.L3.setStyleSheet("border: 4px solid ;")
-        self.L3.setStyleSheet("color: green ;")
-        self.L3.setStyleSheet("background: '#BC0006C'")
+        self.L3.setText("X")
+        self.L3.setStyleSheet("background: '#red'")
+  # segunda fila (?)
+
+    def activar1L22(self):
+        self.L22.setEnabled(False)
+        self.L22.setText("X")
+        self.L22.setStyleSheet("background: '#red'")
+
+    def activar1L23(self):
+        self.L23.setEnabled(False)
+        self.L23.setText("X")
+        self.L23.setStyleSheet("background: '#red'")
+
+    def activar1L12(self):
+        self.l12.setEnabled(False)
+        self.L12.setText("X")
+        self.L12.setStyleSheet("background: '#red'")
+# tercera fila
+
+    def activar1L33(self):
+        self.L33.setEnabled(False)
+        self.L33.setText("X")
+        self.L33.setStyleSheet("background: '#red'")
+
+    def activar1L32(self):
+        self.L32.setEnabled(False)
+        self.L32.setText("X")
+        self.L32.setStyleSheet("background: '#red'")
+
+    def activar1L13(self):
+        self.L13.setEnabled(False)
+        self.L13.setText("X")
+        self.L13.setStyleSheet("background: '#red'")
 
     def activar2L1(self):
         self.L1.setEnabled(False)
         self.L1.setText("O")
-        self.L1.setStyleSheet("border: 4px solid ;")
         self.L1.setStyleSheet("color: green ;")
-        self.L1.setStyleSheet("background: '#BC0100B'")
+        self.L1.setStyleSheet("background: '#green'")
 
     def activar2L2(self):
         self.L1.setEnabled(False)
         self.L1.setText("O")
         self.L1.setStyleSheet("border: 4px solid ;")
         self.L1.setStyleSheet("color: green ;")
-        self.L1.setStyleSheet("background: '#BC0100B'")
+        self.L1.setStyleSheet("background: '#green'")
 
     def activar2L3(self):
         self.L1.setEnabled(False)
         self.L1.setText("O")
         self.L1.setStyleSheet("border: 4px solid ;")
         self.L1.setStyleSheet("color: green ;")
-        self.L1.setStyleSheet("background: '#BC0100B'")
+        self.L1.setStyleSheet("background: '#green'")
+ # segunda fila player 2
 
-    def activador(self):
-        if self.L1.clicked or self.L2.clicked or self.L3.clicked:
-            self.contador
+    def activar2L1(self):
+        self.L22.setEnabled(False)
+        self.L22.setText("O")
+        self.L22.setStyleSheet("color: green ;")
+        self.L22.setStyleSheet("background: '#green'")
 
-    def contador(self):
-        contador = 0
-        if contador == 0:
-            self.player1
-        elif contador == 1:
-            self.player2
+    def activar2L2(self):
+        self.L23.setEnabled(False)
+        self.L23.setText("O")
+        self.L23.setStyleSheet("border: 4px solid ;")
+        self.L23.setStyleSheet("color: green ;")
+        self.L23.setStyleSheet("background: '#green'")
 
-    def player1(self):
-        self.L1.clicked.connect(self.activar1L1)
-        self.L2.clicked.connect(self.activar1L2)
-        self.L3.clicked.connect(self.activar1L3)
-
-    def player2(self):
-        self.L1.clicked.connect(self.activar2L1)
-        self.L2.clicked.connect(self.activar2L2)
-        self.L3.clicked.connect(self.activar2L3)
+    def activar2L3(self):
+        self.L13.setEnabled(False)
+        self.L13.setText("O")
+        self.L13.setStyleSheet("border: 4px solid ;")
+        self.L13.setStyleSheet("color: green ;")
+        self.L13.setStyleSheet("background: '#green'")
 
 
 if __name__ == "__main__":
